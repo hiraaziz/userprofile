@@ -48,14 +48,14 @@ const page = async ({ params }: { params: { slug: string } }) => {
         width={500}
         height={500}
       />
-      <div className="flex text-gray-400 text-sm font-medium justify-between p-4 border-t-2 border-slate-200">
+      <div className="flex text-gray-400 text-sm font-medium justify-between mt-4 p-4 border-t-2 border-slate-200">
         <p>
           Author Name : <span>{data.author.fields.name}</span>
         </p>
         <p>{data.date}</p>
       </div>
       <p>{data.excerpt}</p>
-      <div className="prose tracking-wide text-justify">
+      <div className="prose tracking-wide text-justify w-[500px]">
         {documentToReactComponents(data.content, options)}
       </div>
     </div>
