@@ -40,7 +40,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
   });
   const data: any = response.items[0].fields;
   return (
-    <div className="w-[600px] m-auto mt-20 mb-20 border-2 border-slate-200 rounded-lg shadow-md p-4">
+    <div className="w-[300px] md:w-[600px] m-auto mt-20 mb-20 border-2 border-slate-200 rounded-lg shadow-md p-4">
       <h1 className="font-bold text-2xl"> {data.title}</h1>
       <Image
         src={`https:${data.coverImage.fields.file.url}`}
@@ -55,7 +55,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
         <p>{data.date}</p>
       </div>
       <p>{data.excerpt}</p>
-      <div className="prose tracking-wide text-justify w-[500px]">
+      <div className="prose tracking-wide text-justify  md:w-[500px]">
         {documentToReactComponents(data.content, options)}
       </div>
     </div>
