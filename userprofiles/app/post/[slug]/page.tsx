@@ -3,7 +3,7 @@ import Image from "next/image";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types";
 import Link from "next/link";
-
+export const revalidate = 0;
 export async function generateStaticParams() {
   const response = await client.getEntries({ content_type: "post" });
   return response.items.map((item: any) => ({
